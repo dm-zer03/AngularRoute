@@ -20,9 +20,13 @@ export class Profile {
   }
 */
 
-    this.route.queryParams.subscribe((params) => {
+    /* this.route.queryParams.subscribe((params) => {
       this.userName = params['name'];
       console.log(this.userName);
+    });*/
+
+    this.route.data.subscribe((data) => {
+      this.userName = data['name'];
     });
   }
 }
